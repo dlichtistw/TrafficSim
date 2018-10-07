@@ -10,14 +10,16 @@ package NaSch;
 use strict;
 use warnings;
 
-use Data::Dumper;
-
 sub init_uniform_pos {
-  my ($length, $density) = @_;
+  my ($length, $density, $speed) = @_;
+  unless (defined($speed)) {
+    $speed = 0;
+  }
+
   my @lane = ();
   for my $i (1..$length) {
     if (rand() <= $density) {
-      push(@lane, {'pos' => $i, 'speed' => 0});
+      push(@lane, {'pos' => $i, 'speed' => $speed});
     }
   }
   return \@lane;
