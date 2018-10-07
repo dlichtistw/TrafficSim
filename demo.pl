@@ -1,3 +1,8 @@
+# Copyright (C) 2018 David Lichti
+# All rights reserved.
+#
+# This file is part of TrafficSim and published under the BSD 3-Clause License.
+
 use warnings;
 use strict;
 
